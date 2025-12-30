@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mini Subway Runner</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="intro">
+  <h1>Mini Subway Runner</h1>
+</div>
+
+<h2>Mini Subway Runner - Levels</h2>
+<div class="levels" id="levels"></div>
+
+<div class="game" id="game">
+  <button id="menuToggle">☰</button>
+
+  <div id="slideMenu">
+    <button id="backHome">🏠 Back to Home</button>
+
+    <label>
+      Effects Volume
+      <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.5">
+    </label>
+
+    <label>
+      Music Volume
+      <input type="range" id="musicVolumeSlider" min="0" max="1" step="0.01" value="0.3">
+    </label>
+  </div>
+
+  <div class="score-level">
+    <div class="score">Score: <span id="score">0</span></div>
+    <div class="level-display" id="levelDisplay">Level: 1</div>
+  </div>
+
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <div class="track" id="track"></div>
+  <div class="player" id="player"></div>
+  <div class="bottom-line"></div>
+
+  <div class="controls">
+    <button onclick="moveLeft()">⬅</button>
+    <button onclick="jump()">⬆</button>
+    <button onclick="moveRight()">➡</button>
+  </div>
+
+  <div class="level-complete" id="levelComplete">
+    <div>Level Complete!</div>
+    <button id="nextBtn">Next</button>
+    <button id="backBtn">Back</button>
+  </div>
+
+  <div class="game-over" id="gameOverScreen">
+    <div>Game Over!</div>
+    <button id="restartBtn">Restart</button>
+    <button id="backToLevelsBtn">Back</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

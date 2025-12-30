@@ -1,0 +1,149 @@
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
+
+body{
+  background:#020617;
+  color:white;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:100vh;
+  flex-direction:column;
+  overflow-x:hidden;
+}
+
+button{cursor:pointer}
+
+/* INTRO */
+#intro{
+  position:fixed;
+  inset:0;
+  background:#020617;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:100;
+}
+#intro h1{
+  color:#facc15;
+  font-size:36px;
+  animation:pulse 1.5s infinite;
+}
+@keyframes pulse{
+  0%,100%{transform:scale(1)}
+  50%{transform:scale(1.2);color:#ef4444}
+}
+
+/* LEVELS */
+.levels{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  max-width:350px;
+}
+.level{
+  width:35px;
+  height:35px;
+  margin:3px;
+  background:#1e293b;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  border-radius:5px;
+}
+.level.locked{background:#555}
+
+/* GAME */
+.game{
+  width:350px;
+  height:520px;
+  background:#020617;
+  border-radius:20px;
+  position:relative;
+  overflow:hidden;
+  display:none;
+}
+
+/* SCORE */
+.score-level{
+  position:absolute;
+  top:5px;
+  width:90%;
+  left:50%;
+  transform:translateX(-50%);
+  display:flex;
+  justify-content:space-between;
+}
+
+/* PROGRESS */
+.progress-container{
+  position:absolute;
+  top:35px;
+  width:90%;
+  left:50%;
+  transform:translateX(-50%);
+  height:4px;
+  background:#555;
+}
+.progress-bar{
+  height:100%;
+  width:0%;
+  background:#facc15;
+}
+
+/* TRACK */
+.track{
+  display:flex;
+  height:100%;
+}
+.lane{
+  flex:1;
+  border-left:1px dashed #ffffff22;
+}
+
+/* PLAYER */
+.player{
+  width:35px;
+  height:35px;
+  background:#22c55e;
+  border-radius:50%;
+  position:absolute;
+  bottom:40px;
+  transition:.2s;
+}
+
+/* OBSTACLE */
+.obstacle{
+  position:absolute;
+  width:35px;
+  height:35px;
+  font-size:30px;
+  text-align:center;
+}
+
+/* CONTROLS */
+.controls{
+  position:absolute;
+  bottom:10px;
+  width:100%;
+  display:flex;
+  justify-content:space-around;
+}
+.controls button{
+  width:60px;
+  height:40px;
+  background:#1e293b;
+  border:none;
+  color:white;
+  border-radius:10px;
+}
+
+/* POPUPS */
+.level-complete,.game-over{
+  position:absolute;
+  inset:0;
+  background:#000c;
+  display:none;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+}
